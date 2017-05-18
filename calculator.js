@@ -16,7 +16,7 @@
    * @return { Number }    current total
    */
    function load(x) {
-    validator(x);
+      num(x);
       total = x;
       return total;
    }
@@ -37,8 +37,9 @@
    * @param { Number } x
    */
    function add(x) {
-    validator(x);
+    num(x);
     total += x;
+
    }
 
 
@@ -47,7 +48,7 @@
    * @param  { Number } x
    */
    function subtract(x) {
-    validator(x);
+    num(x);
     total -= x;
    }
 
@@ -57,7 +58,7 @@
    * @param  { Number } x
    */
    function multiply(x) {
-    validator(x);
+    num(x);
     total *= x;
    }
 
@@ -67,7 +68,7 @@
    * @param  { Number } x
    */
    function divide(x) {
-    validator(x);
+    num(x);
     total /= x;
    }
 
@@ -99,7 +100,7 @@
   /**
    * Validation
    */
-   function validator(x) {
+   function num(x) {
     if(typeof x !== "number") {
       throw Error();
     }
@@ -118,5 +119,5 @@
    };
 
  }
-   
+
 
